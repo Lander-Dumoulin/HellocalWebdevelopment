@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var cors = require('cors');
 
-var beerController = require('./controllers/beer');
+
 var userController = require('./controllers/user');
 var authController = require('./controllers/auth');
 var guideController = require('./controllers/guide');
@@ -36,14 +36,7 @@ app.use(passport.initialize());
 
 var router = express.Router();
 
-router.route('/beers')
-    .post(authController.isAuthenticated, beerController.postBeers)
-    .get(authController.isAuthenticated, beerController.getBeers);
 
-router.route('/beers/:beer_id')
-    .get(authController.isAuthenticated, beerController.getBeer)
-    .put(authController.isAuthenticated, beerController.putBeer)
-    .delete(authController.isAuthenticated, beerController.deleteBeer);
 
 router.route('/users')
     .post(authController.isAuthenticated, userController.postUsers)
