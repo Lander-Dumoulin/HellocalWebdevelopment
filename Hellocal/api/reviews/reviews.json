@@ -1,0 +1,32 @@
+[
+    {
+        "guideId": "1",
+        "userId": "1",
+        "rating": 2.5,
+        "comment": "nice guide, great city."
+    },
+    {
+        "guideId": "2",
+        "userId": "2",
+        "rating": 2.5,
+        "comment": "nice guide, great city."
+    },
+    {
+        "guideId": "3",
+        "userId": "3",
+        "rating": 2.5,
+        "comment": "nice guide, great city."
+    },
+    {
+        "guideId": "4",
+        "userId": "4",
+        "rating": 2.5,
+        "comment": "nice guide, great city."
+    },
+    {
+        "guideId": "5",
+        "userId": "5",
+        "rating": 2.5,
+        "comment": "nice guide, great city."
+    }
+]

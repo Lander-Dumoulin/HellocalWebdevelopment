@@ -1,0 +1,63 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <!-- Filter the Guides   -->
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by location:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listFilter' />
+            </div>
+        </div>
+        <div class='row' *ngIf='listFilter'>
+            <div class='col-md-6'>
+                <h3>Filtered by: {{listFilter}} </h3>
+            </div>
+        </div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='guides && guides.length'>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>UserId</th>
+                        <th>Location</th>
+                        <th>Country</th>
+                        <th>From</th>
+                        <th>'Till'</th>
+                        <th>maxPeople</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let guide of guides | guideFilter:listFilter'>
+                        <td>
+                            <img
+                                 [src]="guide.photoUri"
+                                 [title]='guide.userId | uppercase'
+                                 [style.width.px]='imageWidth' 
+                                 [style.margin.px]='imageMargin'>
+                        </td>
+                        <td><a [routerLink]="['/guide', guide.userId]">
+                            {{guide.userId}}
+                            </a>
+                        </td>
+                        <td>{{ guide.location }}</td>
+                        <td>{{ guide.country }}</td>
+                        <td>{{ guide.dateFrom }}</td>
+                        <td>{{ guide.dateTill }}</td>
+                        <td>{{ guide.maxPeople }}</td>
+                        <td>{{ guide.price | currency:'EUR':true:'1.2-2' }}</td>
+                        <td>{{ guide.type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

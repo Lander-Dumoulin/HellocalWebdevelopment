@@ -1,0 +1,32 @@
+[
+    {
+        "guideId": "1",
+        "userId": "1",
+        "date": "17/01/2017",
+        "confirmed": true
+    },
+    {
+        "guideId": "2",
+        "userId": "2",
+        "date": "17/01/2017",
+        "confirmed": true
+    },
+    {
+        "guideId": "3",
+        "userId": "3",
+        "date": "17/01/2017",
+        "confirmed": true
+    },
+    {
+        "guideId": "4",
+        "userId": "4",
+        "date": "17/01/2017",
+        "confirmed": true
+    },
+    {
+        "guideId": "5",
+        "userId": "5",
+        "date": "17/01/2017",
+        "confirmed": true
+    }
+]
